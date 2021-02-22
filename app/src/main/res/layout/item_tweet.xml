@@ -50,7 +50,9 @@
         android:layout_marginTop="@dimen/tvBody_margin_top"
         android:layout_toEndOf="@+id/ivProfileImage"
         android:textColor="@color/black_Tweet_Item_Textview_Color"
-        tools:text="@string/tvBody_test" />
+        tools:text="@string/tvBody_test"
+        android:autoLink="all"
+        android:linksClickable="true"/>
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
