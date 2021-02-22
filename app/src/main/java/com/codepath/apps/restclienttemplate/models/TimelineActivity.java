@@ -1,8 +1,10 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -27,13 +29,31 @@ public class TimelineActivity extends AppCompatActivity {
     RecyclerView rvTweets;
     List<Tweet> tweets;
     TweetsAdapter adapter;
+    SwipeRefreshLayout swipeContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.drawable.ic_iconfinder_social_54_492996);
+        actionBar.setTitle(R.string.app_name);
+
 
         mTwitterClient = TwitterApp.getRestClient(this);
+        swipeContainer = findViewById(R.id.swipeContainer);
+        swipeContainer.setColorSchemeColors(
+                getResources().getColor(R.color.deep_sky_blue_primary_color)
+        );
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.i(TAG, "fetching new data");
+                populateHomeTimeLine();
+            }
+        });
+
 
         // Find the recycler View
         rvTweets = findViewById(R.id.rvTweets);
@@ -53,8 +73,10 @@ public class TimelineActivity extends AppCompatActivity {
                 Log.d(TAG, "onSuccess!" + json.toString());
                 JSONArray jsonArray = json.jsonArray;
                 try {
-                    tweets.addAll(Tweet.fromJsonArray(jsonArray));
+                    adapter.clear();
+                    adapter.addAll(Tweet.fromJsonArray(jsonArray));
                     adapter.notifyDataSetChanged();
+                    swipeContainer.setRefreshing(false);
                 } catch (JSONException e){
                     Log.e(TAG, "Json exception", e);
                 }

@@ -8,10 +8,13 @@
     <dimen name="ivProfile_margin_start">0dp</dimen>
     <dimen name="ivProfile_margin_top">0dp</dimen>
     <dimen name="tvScreen_margin_start">5dp</dimen>
-    <dimen name="tvScreen_margin_top">0dp</dimen>
+    <dimen name="tvScreen_margin_top">5dp</dimen>
     <dimen name="tvBody_margin_start">5dp</dimen>
     <dimen name="tvBody_margin_top">2dp</dimen>
     <dimen name="item_tweet_margin">5dp</dimen>
+    <dimen name="tvScreenName_margin_top">5dp</dimen>
+    <dimen name="ivProfile_margins">5dp</dimen>
+    <dimen name="drawable_circle_dp">40dp</dimen>
 
 
 </resources>
