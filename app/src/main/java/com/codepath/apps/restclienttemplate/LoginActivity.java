@@ -1,11 +1,16 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Intent;
+import android.graphics.drawable.Icon;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 
 import com.codepath.apps.restclienttemplate.models.SampleModel;
 import com.codepath.apps.restclienttemplate.models.SampleModelDao;
@@ -20,6 +25,15 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayShowHomeEnabled(true);
+		actionBar.setIcon(R.drawable.ic_iconfinder_social_54_492996);
+		actionBar.setTitle(R.string.app_name);
+
+
+
+
 
 		final SampleModel sampleModel = new SampleModel();
 		sampleModel.setName("CodePath");
