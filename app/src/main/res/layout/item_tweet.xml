@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/item_tweet_margin"
     android:background="@drawable/shape_rectangle">
@@ -14,9 +14,9 @@
         android:layout_margin="@dimen/ivProfile_margins"
         android:layout_marginStart="@dimen/ivProfile_margin_start"
         android:layout_marginTop="@dimen/ivProfile_margin_top"
-        tools:srcCompat="@tools:sample/avatars"
         android:background="@drawable/shape_circle"
-        android:outlineProvider="background"/>
+        android:outlineProvider="background"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvScreenName"
@@ -49,10 +49,67 @@
         android:layout_marginStart="@dimen/tvBody_margin_start"
         android:layout_marginTop="@dimen/tvBody_margin_top"
         android:layout_toEndOf="@+id/ivProfileImage"
-        android:textColor="@color/black_Tweet_Item_Textview_Color"
-        tools:text="@string/tvBody_test"
         android:autoLink="all"
-        android:linksClickable="true"/>
+        android:linksClickable="true"
+        android:textColor="@color/black_Tweet_Item_Textview_Color"
+        tools:text="@string/tvBody_test" />
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_marginStart="@dimen/item_tweet_margin"
+        android:layout_marginTop="@dimen/item_tweet_margin"
+        android:layout_marginBottom="@dimen/item_tweet_margin"
+        android:layout_toEndOf="@+id/tvName"
+        tools:text="7h" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="@dimen/item_tweet_margin"
+        android:layout_marginTop="@dimen/top_margins"
+        android:layout_marginEnd="@dimen/item_tweet_margin"
+        android:layout_marginBottom="@dimen/item_tweet_margin"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        app:srcCompat="@drawable/ic_iconfinder_bubble_115766" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="@dimen/top_margins"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        app:srcCompat="@drawable/ic_iconfinder_jee01_35_2184645" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        app:srcCompat="@drawable/ic_iconfinder_jee_04_2239656" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="299dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        app:srcCompat="@drawable/ic_iconfinder_social_11_492962" />
+
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
@@ -62,18 +119,6 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:background="?android:attr/listDivider" />
-
-    <TextView
-        android:id="@+id/tvTimeStamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="@dimen/item_tweet_margin"
-        android:layout_marginTop="@dimen/item_tweet_margin"
-        android:layout_marginBottom="@dimen/item_tweet_margin"
-        android:layout_toEndOf="@+id/tvName"
-        tools:text="7h" />
 
 
 </RelativeLayout>
