@@ -2,7 +2,7 @@
 
 **TwitterClient** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -16,9 +16,9 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] User can view more tweets as they scroll with infinite pagination
+- [x] User can view more tweets as they scroll with infinite pagination
 - [ ] Improve the user interface and theme the app to feel "twitter branded"
-- [ ] Links in tweets are clickable and will launch the web browser
+- [x] Links in tweets are clickable and will launch the web browser
 - [ ] User can tap a tweet to display a "detailed" view of that tweet
 - [ ] User can see embedded image media within the tweet detail view
 - [ ] User can watch embedded video within the tweet
@@ -33,13 +33,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/MalikeChapman/TwitterClient/blob/master/app/TwitterWalkThroughUnit3Part1.gif' title='Twitter Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+I had problems with the messing around with the menu items and toolbars.
 
 ## Open-source libraries used
 
@@ -48,7 +49,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2021] [Asher Chapman]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
