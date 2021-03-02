@@ -35,7 +35,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/MalikeChapman/TwitterClient/blob/master/app/TwitterWalkThroughUnit4Part1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/MalikeChapman/TwitterClient/blob/master/app/TwitterWalkThroughUnit4Part2.gif' width='' alt='With time stamp!' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -50,7 +51,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2021] [Asher Chapman]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
